@@ -9,7 +9,7 @@ import (
 
 func hello_world(w http.ResponseWriter, r *http.Request) {
 	sampleEntity := entity.Sample{"hoge", "fuga"}
-	fmt.Fprintf(w, "Hello World")
+	fmt.Fprintf(w, "Hello World. User: "+sampleEntity.User+" Password: "+sampleEntity.Password)
 }
 
 func main() {
